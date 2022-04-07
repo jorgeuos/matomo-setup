@@ -26,9 +26,9 @@ PLUGIN_LIST=(
 for i in "${PLUGIN_LIST[@]}";
 do
     echo "Curl get $i"
-    curl -f -sS --data "access_token=${MATOMO_LICENSE}" https://plugins.matomo.org/api/2.0/plugins/"$i"/download/latest?matomo=$MATOMO_VERSION > ${TMP_DIR}/"$i".zip
+    curl -f -sS --data "access_token=${MATOMO_LICENSE}" https://plugins.matomo.org/api/2.0/plugins/"$i"/download/latest?matomo="$MATOMO_VERSION" > "${TMP_DIR}"/"$i".zip
     echo "Unzip $i"
-    unzip -o ${TMP_DIR}/"$i".zip -d "${WORKSPACE_DIR}"/plugins 2> /dev/null
+    unzip -o "${TMP_DIR}"/"$i".zip -d "${WORKSPACE_DIR}"/plugins 2> /dev/null
     echo "Exclude to be tracked from working repo"
     grep -qxF "$i" "${WORKSPACE_DIR}"/.git/info/exclude || echo "$i" >> "${WORKSPACE_DIR}"/.git/info/exclude
 done
