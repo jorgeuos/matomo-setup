@@ -20,7 +20,7 @@ make premium
 
 To make it easier to install cutom plugins from any other git repo, I made it easier to keep track of them using a `.json` file
 ```bash
-make digi
+make custom
 ```
 
 JSON Structure:

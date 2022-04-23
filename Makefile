@@ -19,9 +19,16 @@ clone:
 premium:
 	./scripts/premium-plugins.sh
 
-digi:
-	./scripts/digi-plugins.sh
+custom:
+	./scripts/custom-plugins.sh
+
+contrib:
+	./scripts/contrib-plugins.sh
 
 all-plugins:
 	make premium
-	make digi
+	make contrib
+	make custom
+
+activate:
+	./scripts/activate-plugins.sh

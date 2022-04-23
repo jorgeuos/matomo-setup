@@ -21,16 +21,6 @@
             }
         },
         {
-            "GroupPermissions":{
-                "branch":"4.0.0",
-                "token":"",
-                "protocol":"https://",
-                "url-prefix":"",
-                "git-url":"github.com",
-                "url-suffix":"/tomper00/plugin-GroupPermissions"
-            }
-        },
-        {
             "SingleDigitalGateway":{
                 "branch":"v0.2.7",
                 "token":"SDG_OAUTH",
@@ -58,6 +48,18 @@
                 "url-prefix":"oauth2:",
                 "git-url":"GITLAB_DIGI",
                 "url-suffix":"/digi-matomo/plugins/SegmentEditorUI.git"
+            }
+        }
+    ],
+    "deprecated":[
+        {
+            "GroupPermissions":{
+                "branch":"4.0.0",
+                "token":"",
+                "protocol":"https://",
+                "url-prefix":"",
+                "git-url":"github.com",
+                "url-suffix":"/tomper00/plugin-GroupPermissions"
             }
         }
     ]
