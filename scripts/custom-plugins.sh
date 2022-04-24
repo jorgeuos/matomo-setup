@@ -35,7 +35,10 @@ for i in "${PLUGINS[@]}"; do
         GITURL="github.com"
     fi;
     echo "Fetching: "
-    echo "${PLUGIN}"
+    printf 'Plugin: %s
+Branch: %s \n' \
+    "${PLUGIN}" \
+    "${BRANCH}"
     git clone --depth 1 --branch "${BRANCH}" --single-branch "${PROTOCOL}${URLPREFIX}${GITURL}${URLSUFFIX}" "$TMP_DIR/${PLUGIN}"
     echo "Exclude to be tracked from working repo"
     grep -qxF "${PLUGIN}" "${WORKSPACE_DIR}"/.git/info/exclude || echo "${PLUGIN}" >> "${WORKSPACE_DIR}"/.git/info/exclude
@@ -44,7 +47,7 @@ done
 # @todo: rsync
 echo "Syncing:"
 
-rsync -avz "${TMP_DIR}"/ "${WORKSPACE_DIR}"/plugins
+rsync -avz "${TMP_DIR}"/ "${WORKSPACE_DIR}"/plugins > /dev/null 2>&1
 
 
 

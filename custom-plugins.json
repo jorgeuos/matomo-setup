@@ -22,7 +22,7 @@
         },
         {
             "SingleDigitalGateway":{
-                "branch":"v0.2.7",
+                "branch":"v0.2.9",
                 "token":"SDG_OAUTH",
                 "protocol":"https://",
                 "url-prefix":"oauth2:",
