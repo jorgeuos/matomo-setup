@@ -10,6 +10,8 @@ cmd-exists-%:
 	@hash $(*) > /dev/null 2>&1 || \
 		(echo "ERROR: '$(*)' must be installed and available on your PATH."; exit 1)
 
+everything: install all-plugins
+
 install: cmd-exists-git
 	./scripts/get-matomo.sh
 

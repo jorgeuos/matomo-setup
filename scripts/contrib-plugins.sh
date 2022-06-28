@@ -21,7 +21,7 @@ plugins=(
 )
 for i in "${plugins[@]}"
 do
-  curl -f -sS https://plugins.matomo.org/api/2.0/plugins/$i/download/latest > "${TMP_DIR}"/"$i".zip
+  curl -f -sS https://plugins.matomo.org/api/2.0/plugins/"$i"/download/latest?matomo="$MATOMO_VERSION" > "${TMP_DIR}"/"$i".zip
   echo "unzip \"${TMP_DIR}/$i.zip\" -d \"${TMP_DIR}\""
   unzip "${TMP_DIR}/$i.zip" -d "${TMP_DIR}"
   echo adding "$i"
