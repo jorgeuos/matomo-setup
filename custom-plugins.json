@@ -1,75 +1,85 @@
 {
-    "plugins" : [
+    "plugins": [
         {
-            "UserFeedback":{
-                "branch":"v4.0.16",
-                "token":"",
-                "protocol":"https://",
-                "url-prefix":"",
-                "git-url":"GITHUB_DIGI",
-                "url-suffix":"/UserFeedback.git"
+            "UserFeedback": {
+                "branch": "v4.0.17",
+                "token": "",
+                "protocol": "https://",
+                "url-prefix": "",
+                "git-url": "GITHUB_DIGI",
+                "url-suffix": "/UserFeedback.git"
             }
         },
         {
-            "DBHealth":{
-                "branch":"v0.0.10",
-                "token":"",
-                "protocol":"https://",
-                "url-prefix":"",
-                "git-url":"GITHUB_DIGI",
-                "url-suffix":"/DBHealth.git"
+            "DBHealth": {
+                "branch": "v0.0.11",
+                "token": "",
+                "protocol": "https://",
+                "url-prefix": "",
+                "git-url": "GITHUB_DIGI",
+                "url-suffix": "/DBHealth.git"
             }
         },
         {
-            "SingleDigitalGateway":{
-                "branch":"v0.3.1",
-                "token":"SDG_OAUTH",
-                "protocol":"https://",
-                "url-prefix":"oauth2:",
-                "git-url":"GITLAB_DIGI",
-                "url-suffix":"/digi-matomo/plugins/SingleDigitalGateway.git"
+            "SingleDigitalGateway": {
+                "branch": "v0.3.3-dev",
+                "token": "SDG_OAUTH",
+                "protocol": "https://",
+                "url-prefix": "oauth2:",
+                "git-url": "GITLAB_DIGI",
+                "url-suffix": "/digi-matomo/plugins/SingleDigitalGateway.git"
             }
         },
         {
-            "DataExport":{
-                "branch":"v0.0.1-rc",
-                "token":"DIGI_PLUGINS_DATAEXPORT",
-                "protocol":"https://",
-                "url-prefix":"oauth2:",
-                "git-url":"GITLAB_DIGI",
-                "url-suffix":"/digi-matomo/plugins/DataExport.git"
+            "DataExport": {
+                "branch": "v0.0.1-rc",
+                "token": "DIGI_PLUGINS_DATAEXPORT",
+                "protocol": "https://",
+                "url-prefix": "oauth2:",
+                "git-url": "GITLAB_DIGI",
+                "url-suffix": "/digi-matomo/plugins/DataExport.git"
             }
         },
         {
-            "SegmentEditorUI":{
-                "branch":"MTMO-216",
-                "token":"SEUI_READ_TOKEN",
-                "protocol":"https://",
-                "url-prefix":"oauth2:",
-                "git-url":"GITLAB_DIGI",
-                "url-suffix":"/digi-matomo/plugins/SegmentEditorUI.git"
+            "SegmentEditorUI": {
+                "branch": "MTMO-216",
+                "token": "SEUI_READ_TOKEN",
+                "protocol": "https://",
+                "url-prefix": "oauth2:",
+                "git-url": "GITLAB_DIGI",
+                "url-suffix": "/digi-matomo/plugins/SegmentEditorUI.git"
             }
         },
         {
-            "CleanPii":{
-                "branch":"main",
-                "token":"",
-                "protocol":"https://",
-                "url-prefix":"",
-                "git-url":"github.com",
-                "url-suffix":"/jorgeuos/CleanPii.git"
+            "CleanPii": {
+                "branch": "main",
+                "token": "",
+                "protocol": "https://",
+                "url-prefix": "",
+                "git-url": "github.com",
+                "url-suffix": "/jorgeuos/CleanPii.git"
+            }
+        },
+        {
+            "TrackThis": {
+                "branch": "main",
+                "token": "",
+                "protocol": "https://",
+                "url-prefix": "",
+                "git-url": "github.com",
+                "url-suffix": "/jorgeuos/TrackThis.git"
             }
         }
     ],
-    "deprecated":[
+    "deprecated": [
         {
-            "GroupPermissions":{
-                "branch":"4.0.0",
-                "token":"",
-                "protocol":"https://",
-                "url-prefix":"",
-                "git-url":"github.com",
-                "url-suffix":"/tomper00/plugin-GroupPermissions"
+            "GroupPermissions": {
+                "branch": "4.0.0",
+                "token": "",
+                "protocol": "https://",
+                "url-prefix": "",
+                "git-url": "github.com",
+                "url-suffix": "/tomper00/plugin-GroupPermissions"
             }
         }
     ]
