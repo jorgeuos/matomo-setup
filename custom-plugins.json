@@ -54,8 +54,8 @@
             "CleanPii": {
                 "branch": "main",
                 "token": "",
-                "protocol": "https://",
-                "url-prefix": "",
+                "protocol": "git",
+                "url-prefix": "@",
                 "git-url": "github.com",
                 "url-suffix": "/jorgeuos/CleanPii.git"
             }
