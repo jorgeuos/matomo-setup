@@ -21,16 +21,6 @@
             }
         },
         {
-            "SingleDigitalGateway": {
-                "branch": "v0.3.3-dev",
-                "token": "SDG_OAUTH",
-                "protocol": "https://",
-                "url-prefix": "oauth2:",
-                "git-url": "GITLAB_DIGI",
-                "url-suffix": "/digi-matomo/plugins/SingleDigitalGateway.git"
-            }
-        },
-        {
             "DataExport": {
                 "branch": "v0.0.1-rc",
                 "token": "DIGI_PLUGINS_DATAEXPORT",
@@ -57,7 +47,7 @@
                 "protocol": "git",
                 "url-prefix": "@",
                 "git-url": "github.com",
-                "url-suffix": "/jorgeuos/CleanPii.git"
+                "url-suffix": ":jorgeuos/CleanPii.git"
             }
         },
         {
@@ -72,6 +62,16 @@
         }
     ],
     "deprecated": [
+        {
+            "SingleDigitalGateway": {
+                "branch": "v0.3.3-dev",
+                "token": "SDG_OAUTH",
+                "protocol": "https://",
+                "url-prefix": "oauth2:",
+                "git-url": "GITLAB_DIGI",
+                "url-suffix": "/digi-matomo/plugins/SingleDigitalGateway.git"
+            }
+        },
         {
             "GroupPermissions": {
                 "branch": "4.0.0",
