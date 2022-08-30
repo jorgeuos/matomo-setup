@@ -7,6 +7,7 @@ source ./scripts/check-env.sh
 rm -rf "${TMP_DIR}"
 mkdir "${TMP_DIR}"
 
+# Contrib Plugins
 plugins=(
     ExtraTools
     CustomOptOut
@@ -18,6 +19,7 @@ plugins=(
     TrackerDomain
     GoogleAnalyticsImporter
     BotTracker
+    DevelopmentToogle
 )
 for i in "${plugins[@]}"
 do

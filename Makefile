@@ -34,3 +34,15 @@ all-plugins:
 
 activate:
 	./scripts/activate-plugins.sh
+
+activate-contrib:
+	./scripts/activate-contrib.sh
+
+activate-premium:
+	./scripts/activate-premium.sh
+
+activate-custom:
+	./scripts/activate-custom.sh
+
+copy-conf:
+	./scripts/copy-conf.sh

@@ -59,6 +59,16 @@
                 "git-url": "github.com",
                 "url-suffix": "/jorgeuos/TrackThis.git"
             }
+        },
+        {
+            "DevelopmentToogle": {
+                "branch": "4.x-dev",
+                "token": "",
+                "protocol": "git",
+                "url-prefix": "@",
+                "git-url": "github.com",
+                "url-suffix": ":Findus23/plugin-DevelopmentToogle.git"
+            }
         }
     ],
     "deprecated": [
