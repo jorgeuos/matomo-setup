@@ -1,0 +1,14 @@
+[
+    "CustomOptOut",
+    "GroupPermissions",
+    "InvalidateReports",
+    "AdminNotification",
+    "UserConsole",
+    "QueuedTracking",
+    "TrackerDomain",
+    "GoogleAnalyticsImporter",
+    "BotTracker",
+    "DevelopmentToogle",
+    "LogViewer",
+    "ExtraTools"
+]
