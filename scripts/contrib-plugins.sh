@@ -1,5 +1,5 @@
 #!/bin/bash
-set -xe
+set -e
 
 # shellcheck source=/dev/null
 source ./scripts/check-env.sh
@@ -7,31 +7,32 @@ source ./scripts/check-env.sh
 rm -rf "${TMP_DIR}"
 mkdir "${TMP_DIR}"
 
-# Contrib Plugins
-plugins=(
-    ExtraTools
-    CustomOptOut
-    GroupPermissions
-    InvalidateReports
-    AdminNotification
-    UserConsole
-    QueuedTracking
-    TrackerDomain
-    GoogleAnalyticsImporter
-    BotTracker
-    DevelopmentToogle
-)
-for i in "${plugins[@]}"
+# Get Contrib Plugins list and store it in the array CONTRIB_PLUGINS
+declare -a CONTRIB_PLUGINS=()
+while IFS=''
+  read -r line;
+  do CONTRIB_PLUGINS+=("$line");
+done < <(jq -r '.[]' contrib-plugins.json)
+
+
+for i in "${CONTRIB_PLUGINS[@]}"
 do
+  echo "--############################--"
+  echo "Fetching: $i"
   curl -f -sS https://plugins.matomo.org/api/2.0/plugins/"$i"/download/latest?matomo="$MATOMO_VERSION" > "${TMP_DIR}"/"$i".zip
-  echo "unzip \"${TMP_DIR}/$i.zip\" -d \"${TMP_DIR}\""
-  unzip "${TMP_DIR}/$i.zip" -d "${TMP_DIR}"
+  echo "unzip -q \"${TMP_DIR}/$i.zip\" -d \"${TMP_DIR}\""
+  unzip -q "${TMP_DIR}/$i.zip" -d "${TMP_DIR}"
   echo adding "$i"
   echo "Exclude to be tracked from working repo"
   grep -qxF "$i" "${WORKSPACE_DIR}"/.git/info/exclude || echo "$i" >> "${WORKSPACE_DIR}"/.git/info/exclude
 done
 
+echo "--############################--"
+echo "Syncing to ${WORKSPACE_DIR}/plugins"
 rsync -avz "${TMP_DIR}"/ "${WORKSPACE_DIR}"/plugins
 
 # clean up
+echo "Cleaning up tmp dir"
 rm -rf "${TMP_DIR:?}"/*
+
+echo "Done!"

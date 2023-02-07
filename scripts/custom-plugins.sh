@@ -7,7 +7,7 @@ source ./scripts/check-env.sh
 rm -rf "${TMP_DIR}"
 mkdir "${TMP_DIR}"
 
- # read the devices.json file and store it in the variable jsonlist
+# read the devices.json file and store it in the variable jsonlist
 PLUGINLIST=$(jq -r '.plugins' "custom-plugins.json")
 declare -a PLUGINS=()
 while IFS='' read -r line; do PLUGINS+=("$line");done < <(jq -r '.plugins[] | keys[]' custom-plugins.json)

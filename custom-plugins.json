@@ -1,46 +1,6 @@
 {
     "plugins": [
         {
-            "UserFeedback": {
-                "branch": "v4.0.17",
-                "token": "",
-                "protocol": "https://",
-                "url-prefix": "",
-                "git-url": "GITHUB_DIGI",
-                "url-suffix": "/UserFeedback.git"
-            }
-        },
-        {
-            "DBHealth": {
-                "branch": "v0.0.11",
-                "token": "",
-                "protocol": "https://",
-                "url-prefix": "",
-                "git-url": "GITHUB_DIGI",
-                "url-suffix": "/DBHealth.git"
-            }
-        },
-        {
-            "DataExport": {
-                "branch": "v0.0.1-rc",
-                "token": "DIGI_PLUGINS_DATAEXPORT",
-                "protocol": "https://",
-                "url-prefix": "oauth2:",
-                "git-url": "GITLAB_DIGI",
-                "url-suffix": "/digi-matomo/plugins/DataExport.git"
-            }
-        },
-        {
-            "SegmentEditorUI": {
-                "branch": "MTMO-216",
-                "token": "SEUI_READ_TOKEN",
-                "protocol": "https://",
-                "url-prefix": "oauth2:",
-                "git-url": "GITLAB_DIGI",
-                "url-suffix": "/digi-matomo/plugins/SegmentEditorUI.git"
-            }
-        },
-        {
             "CleanPii": {
                 "branch": "main",
                 "token": "",
@@ -72,25 +32,5 @@
         }
     ],
     "deprecated": [
-        {
-            "SingleDigitalGateway": {
-                "branch": "v0.3.3-dev",
-                "token": "SDG_OAUTH",
-                "protocol": "https://",
-                "url-prefix": "oauth2:",
-                "git-url": "GITLAB_DIGI",
-                "url-suffix": "/digi-matomo/plugins/SingleDigitalGateway.git"
-            }
-        },
-        {
-            "GroupPermissions": {
-                "branch": "4.0.0",
-                "token": "",
-                "protocol": "https://",
-                "url-prefix": "",
-                "git-url": "github.com",
-                "url-suffix": "/tomper00/plugin-GroupPermissions"
-            }
-        }
     ]
 }
