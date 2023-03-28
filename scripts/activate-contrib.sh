@@ -2,6 +2,8 @@
 
 # shellcheck source=/dev/null
 source ./scripts/check-env.sh
+# shellcheck source=/dev/null
+source ./scripts/check-jq.sh
 
 # Get Contrib Plugins list and store it in the array CONTRIB_PLUGINS
 declare -a CONTRIB_PLUGINS=()

@@ -3,6 +3,8 @@ set -e
 
 # shellcheck source=/dev/null
 source ./scripts/check-env.sh
+# shellcheck source=/dev/null
+source ./scripts/check-jq.sh
 
 rm -rf "${TMP_DIR}"
 mkdir "${TMP_DIR}"

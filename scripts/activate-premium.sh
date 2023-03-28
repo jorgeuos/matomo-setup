@@ -2,6 +2,8 @@
 
 # shellcheck source=/dev/null
 source ./scripts/check-env.sh
+# shellcheck source=/dev/null
+source ./scripts/check-jq.sh
 
  # read the custom-plugin.json file and store it in the variable jsonlist
 declare -a PLUGINS=()
