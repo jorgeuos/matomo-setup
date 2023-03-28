@@ -42,8 +42,10 @@ Branch: %s \n' \
     "${PLUGIN}" \
     "${BRANCH}"
     git clone --branch "${BRANCH}" "${PROTOCOL}${URLPREFIX}${GITURL}${URLSUFFIX}" "$TMP_DIR/${PLUGIN}"
-    echo "Exclude to be tracked from working repo"
-    grep -qxF "${PLUGIN}" "${WORKSPACE_DIR}"/.git/info/exclude || echo "${PLUGIN}" >> "${WORKSPACE_DIR}"/.git/info/exclude
+    if [ "$MATOMO_GIT" == "true" ]; then
+        echo "Exclude to be tracked from working repo"
+        grep -qxF "${PLUGIN}" "${WORKSPACE_DIR}"/.git/info/exclude || echo "${PLUGIN}" >> "${WORKSPACE_DIR}"/.git/info/exclude
+    fi
 done
 
 # @todo: rsync

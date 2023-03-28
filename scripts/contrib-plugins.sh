@@ -25,8 +25,10 @@ do
   echo "unzip -q \"${TMP_DIR}/$i.zip\" -d \"${TMP_DIR}\""
   unzip -q "${TMP_DIR}/$i.zip" -d "${TMP_DIR}"
   echo adding "$i"
-  echo "Exclude to be tracked from working repo"
-  grep -qxF "$i" "${WORKSPACE_DIR}"/.git/info/exclude || echo "$i" >> "${WORKSPACE_DIR}"/.git/info/exclude
+  if [ "$MATOMO_GIT" == "true" ]; then
+    echo "Exclude to be tracked from working repo"
+    grep -qxF "$i" "${WORKSPACE_DIR}"/.git/info/exclude || echo "$i" >> "${WORKSPACE_DIR}"/.git/info/exclude
+  fi
 done
 
 echo "--############################--"
