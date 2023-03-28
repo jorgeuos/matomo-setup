@@ -48,9 +48,11 @@ Branch: %s \n' \
     fi
 done
 
-# @todo: rsync
-echo "Syncing:"
 
+echo "Chown to $SERVER_USER"
+sudo chown -R "$SERVER_USER":"$SERVER_USER" "${TMP_DIR}"
+
+echo "Syncing:"
 rsync -avz "${TMP_DIR}"/ "${WORKSPACE_DIR}"/plugins > /dev/null 2>&1
 
 

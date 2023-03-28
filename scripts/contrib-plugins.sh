@@ -32,6 +32,10 @@ do
 done
 
 echo "--############################--"
+
+echo "Chown to $SERVER_USER"
+sudo chown -R "$SERVER_USER":"$SERVER_USER" "${TMP_DIR}"
+
 echo "Syncing to ${WORKSPACE_DIR}/plugins"
 rsync -avz "${TMP_DIR}"/ "${WORKSPACE_DIR}"/plugins
 

@@ -16,6 +16,10 @@ export MAXMIND_URL="https://download.maxmind.com/app/geoip_download?edition_id=G
 
 curl "$MAXMIND_URL" -o /tmp/GeoLite2-City.tar.gz
 cd /tmp && tar xvf /tmp/GeoLite2-City.tar.gz
+
+echo "Chown to $SERVER_USER"
+sudo chown -R "$SERVER_USER":"$SERVER_USER" /tmp/GeoLite2-City*/GeoLite2-City.mmdb
+
 mv /tmp/GeoLite2-City*/GeoLite2-City.mmdb "${WORKSPACE_DIR}"/misc/GeoLite2-City.mmdb
 rm -rf /tmp/GeoLite*
 
