@@ -53,7 +53,7 @@ echo "Chown to $SERVER_USER"
 sudo chown -R "$SERVER_USER":"$SERVER_USER" "${TMP_DIR}"
 
 echo "Syncing:"
-rsync -avz "${TMP_DIR}"/ "${WORKSPACE_DIR}"/plugins > /dev/null 2>&1
+sudo rsync -avz "${TMP_DIR}"/ "${WORKSPACE_DIR}"/plugins > /dev/null 2>&1
 
 
 
