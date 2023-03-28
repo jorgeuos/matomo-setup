@@ -46,3 +46,6 @@ activate-custom:
 
 copy-conf:
 	./scripts/copy-conf.sh
+
+get-maxmind:
+	./scripts/get-maxminddb.sh
