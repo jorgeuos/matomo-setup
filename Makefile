@@ -49,3 +49,6 @@ copy-conf:
 
 get-maxmind:
 	./scripts/get-maxminddb.sh
+
+fix-permissions:
+	./scripts/fix-permissions.sh
