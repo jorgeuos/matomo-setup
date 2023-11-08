@@ -1,4 +1,4 @@
-# Easelly Setup Matomo locally.
+# Easily Setup Matomo locally.
 
 Jumping between different workstations can be a hazzle.
 
