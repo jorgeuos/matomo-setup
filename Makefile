@@ -15,6 +15,9 @@ everything: install all-plugins
 install: cmd-exists-git
 	./scripts/get-matomo.sh
 
+db-create:
+	./scripts/create-db.sh
+
 clone:
 	./scripts/clone.sh
 

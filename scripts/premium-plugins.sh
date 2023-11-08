@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# Example how to do it locally
+# curl -f -sS --data "access_token=SOME_TOKEN" "https://plugins.matomo.org/api/2.0/plugins/MultiChannelConversionAttribution/download/latest?matomo=4.12.2" > MultiChannelConversionAttribution.zip
+
+
 # shellcheck source=/dev/null
 source ./scripts/check-env.sh
 
